@@ -29,6 +29,21 @@ public class MainActivity extends AppCompatActivity {
         Random rand= new Random();
 
         int red = rand.nextInt(256);
-        txvR.setText()
+        txvR.setText("RED : "+red);
+        txvR.setTextColor(Color.rgb(red,0,0));
+
+        int blue = rand.nextInt(256);
+        txvB.setText("BLUE : "+blue);
+        txvB.setTextColor(Color.rgb(0,0,blue));
+
+        int green = rand.nextInt(256);
+        txvG.setText("GREEN : "+green);
+        txvG.setTextColor(Color.rgb(0,green,0));
+
+        text += "  "+red + " , " + green + " , "+ blue + "\n";
+        txv.setText(text);
+        txv.setTextSize(16);
+        txv.setMovementMethod(new ScrollingMovementMethod());
+        txv.setBackgroundColor(Color.rgb(red,green,blue));
     }
 }
